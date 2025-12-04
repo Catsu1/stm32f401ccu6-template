@@ -23,7 +23,8 @@
             "description": "Debug | Ninja",
             "binaryDir": "${sourceDir}/build/debug",
             "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug"
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_C_FLAGS_DEBUG" : "-g -Og"
             }         
         }
     ],

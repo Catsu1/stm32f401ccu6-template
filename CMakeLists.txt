@@ -10,3 +10,11 @@ project(stm32f401ccu6_template
 set(OUTPUT "${CMAKE_PROJECT_NAME}_v${PROJECT_VERSION}")
 
 add_executable(${OUTPUT})
+
+target_sources(${OUTPUT}
+    PRIVATE
+        main.c
+        startup_stm32f401ccux.s
+        syscalls.c
+        system_stm32f4xx.c
+)

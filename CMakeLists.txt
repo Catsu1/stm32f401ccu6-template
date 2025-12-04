@@ -30,3 +30,8 @@ target_compile_definitions(${OUTPUT}
     PRIVATE
         STM32F401xC
 )
+
+target_compile_options(${OUTPUT}
+    PRIVATE
+        ${CORE_FLAGS}
+)

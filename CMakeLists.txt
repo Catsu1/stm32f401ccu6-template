@@ -6,3 +6,7 @@ project(stm32f401ccu6_template
     LANGUAGES       ASM C CXX 
     VERSION         0.1.0
 )
+
+set(OUTPUT "${CMAKE_PROJECT_NAME}_v${PROJECT_VERSION}")
+
+add_executable(${OUTPUT})

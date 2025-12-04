@@ -43,4 +43,8 @@ target_link_options(${OUTPUT}
         -Wl,--gc-sections
 )
 
+set_target_properties(${OUTPUT} 
+    PROPERTIES 
+        SUFFIX ".elf")
+
 add_subdirectory(cmsis)

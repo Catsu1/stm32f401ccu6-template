@@ -42,3 +42,5 @@ target_link_options(${OUTPUT}
         -T${CMAKE_SOURCE_DIR}/STM32F401CCUX_FLASH.ld
         -Wl,--gc-sections
 )
+
+add_subdirectory(cmsis)

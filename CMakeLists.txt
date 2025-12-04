@@ -18,3 +18,8 @@ target_sources(${OUTPUT}
         syscalls.c
         system_stm32f4xx.c
 )
+
+target_compile_definitions(${OUTPUT}
+    PRIVATE
+        STM32F401xC
+)

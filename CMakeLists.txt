@@ -35,3 +35,10 @@ target_compile_options(${OUTPUT}
     PRIVATE
         ${CORE_FLAGS}
 )
+
+target_link_options(${OUTPUT} 
+    PRIVATE
+        ${CORE_FLAGS}
+        -T${CMAKE_SOURCE_DIR}/STM32F401CCUX_FLASH.ld
+        -Wl,--gc-sections
+)

@@ -9,6 +9,13 @@ project(stm32f401ccu6_template
 
 set(OUTPUT "${CMAKE_PROJECT_NAME}_v${PROJECT_VERSION}")
 
+set(CORE_FLAGS
+    -mcpu=cortex-m4
+    -mthumb
+    -mfloat-abi=hard
+    -mfpu=fpv4-sp-d16 
+)
+
 add_executable(${OUTPUT})
 
 target_sources(${OUTPUT}

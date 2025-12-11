@@ -6,3 +6,5 @@ project(stm32f401ccu6_template
     LANGUAGES       ASM C CXX 
     VERSION         0.1.0
 )
+
+add_subdirectory(app)

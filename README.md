@@ -1,0 +1,1 @@
+# Minimal STM32F401CCU6 template

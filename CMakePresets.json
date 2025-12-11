@@ -24,12 +24,28 @@
                 "CMAKE_ASM_FLAGS_DEBUG": "-g",
                 "CMAKE_C_FLAGS_DEBUG" : "-g -Og"
             }         
+        },
+        {
+            "name": "release",
+            "inherits": "base",
+            "displayName": "Release",
+            "description": "Release | Ninja",
+            "binaryDir": "${sourceDir}/build/release",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_ASM_FLAGS_RELEASE": "-O2",
+                "CMAKE_C_FLAGS_RELEASE" : "-O2"
+            }         
         }
     ],
     "buildPresets": [
         {
             "name": "debug",
             "configurePreset": "debug"
+        },
+        {
+            "name": "release",
+            "configurePreset": "release"
         }
     ]
 }

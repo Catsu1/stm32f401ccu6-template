@@ -8,3 +8,4 @@ project(stm32f401ccu6_template
 )
 
 add_subdirectory(app)
+add_subdirectory(platform)

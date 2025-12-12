@@ -7,5 +7,5 @@ project(stm32f401ccu6_template
     VERSION         0.1.0
 )
 
-add_subdirectory(app)
-add_subdirectory(platform)
+add_subdirectory(src)
+add_subdirectory(external)

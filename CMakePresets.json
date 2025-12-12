@@ -9,6 +9,7 @@
             "toolchainFile": "${sourceDir}/cmake/arm-none-eabi-gcc.cmake",
             "cacheVariables": {
                 "CMAKE_C_STANDARD": "11",
+                "CMAKE_COMPILE_WARNING_AS_ERROR": "ON",
                 "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
                 "CMAKE_VERBOSE_MAKEFILE": "ON"
             }
@@ -20,9 +21,7 @@
             "description": "Debug | Ninja",
             "binaryDir": "${sourceDir}/build/debug",
             "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug",
-                "CMAKE_ASM_FLAGS_DEBUG": "-g",
-                "CMAKE_C_FLAGS_DEBUG" : "-g -Og"
+                "CMAKE_BUILD_TYPE": "Debug"
             }         
         },
         {
@@ -32,9 +31,7 @@
             "description": "Release | Ninja",
             "binaryDir": "${sourceDir}/build/release",
             "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Release",
-                "CMAKE_ASM_FLAGS_RELEASE": "-O2",
-                "CMAKE_C_FLAGS_RELEASE" : "-O2"
+                "CMAKE_BUILD_TYPE": "Release"
             }         
         }
     ],

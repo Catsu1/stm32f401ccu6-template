@@ -1,4 +1,3 @@
-
 set(CMAKE_SYSTEM_NAME                   Generic)
 set(CMAKE_SYSTEM_PROCESSOR              arm)
 
@@ -14,6 +13,17 @@ set(CMAKE_RANLIB                        arm-none-eabi-ranlib)
 set(CMAKE_SIZE                          arm-none-eabi-size)
 set(CMAKE_STRIP                         arm-none-eabi-strip)
 set(CMAKE_GCOV                          arm-none-eabi-gcov)
+
+set(C_WARNING_FLAGS                     "-Wall -Wextra -Wshadow -Wdouble-promotion")
+set(CMAKE_C_FLAGS                       "${C_WARNING_FLAGS} -ffunction-sections -fdata-sections -fstack-usage" CACHE INTERNAL "")
+
+set(CMAKE_ASM_FLAGS_DEBUG               -g CACHE INTERNAL "")
+set(CMAKE_ASM_FLAGS_RELEASE             -O2 CACHE INTERNAL "")
+
+set(CMAKE_C_FLAGS_DEBUG                 "-Og -g" CACHE INTERNAL "")
+set(CMAKE_C_FLAGS_RELEASE               -O2 CACHE INTERNAL "")
+
+set(CMAKE_EXE_LINKER_FLAGS              "--specs=nosys.specs -Wl,--print-memory-usage -Wl,--gc-sections" CACHE INTERNAL "")
 
 set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM   NEVER)
 set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY   ONLY)
